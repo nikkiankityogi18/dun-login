@@ -1,19 +1,17 @@
 import React, { useState } from "react";
-import Dashboard from "./Dashboard";
 import { useNavigate } from "react-router-dom";
 
-const API_URL = "https://stg.dhunjam.in/account/admin/login"; // Replace with your actual API endpoint
+const API_URL = "https://stg.dhunjam.in/account/admin/login";
 
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [loginMessage, setLoginMessage] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  // const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
 
   const handleLogin = () => {
-    // Make a request to the API for user authentication
     fetch(API_URL, {
       method: "POST",
       headers: {
@@ -27,9 +25,8 @@ function Login() {
         if (data.response === "Success") {
           setLoginMessage("Login successful!");
           setIsLoggedIn(true);
-          // history.push(`/dashboard/${data.data.id}`);
+
           navigate(`/dashboard/${data.data.id}`);
-          // Handle successful login, e.g., store the token in local storage
         } else {
           setLoginMessage("Login failed. Please check your credentials.");
         }
@@ -39,9 +36,9 @@ function Login() {
         setLoginMessage("An error occurred. Please try again.");
       });
   };
-  const togglePasswordVisibility = () => {
-    setShowPassword(!showPassword);
-  };
+  // const togglePasswordVisibility = () => {
+  //   setShowPassword(!showPassword);
+  // };
 
   return (
     <div className="login-page h-full">
