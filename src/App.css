@@ -1,38 +1,53 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #030303;
+}
 .App {
-  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  /* background-color: #030303; */
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.login-page {
+  max-width: 600px;
+  margin: auto;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.btn {
+  background-color: #6741d9;
+  width: 100%;
   color: white;
+  font-size: 16px;
+  font-weight: 500;
+}
+.btn:hover {
+  border: 1px solid #f0c3f1;
+}
+.heading {
+  color: white;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 32px;
 }
 
-.App-link {
-  color: #61dafb;
+.txt-box {
+  border: 1px solid white;
+  background-color: black;
+  padding: 8px 8px;
+  width: 100%;
+  border-radius: 12px;
+  color: white;
+  font-size: 16px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.disable-color {
+  accent-color: #c2c2c2;
+  cursor: none;
+  color: #c2c2c2;
+  border: 1px solid #c2c2c2;
+}
+.selected-radio-btn-color {
+  accent-color: #6741d9;
+}
+.chart-border {
+  border-bottom: 2px solid white;
+  border-left: 2px solid white;
+  margin: 16px;
 }
